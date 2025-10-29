@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rádio do Campo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="img/campo.png" alt="Rádio do Campo" class="logo-icon">
+                    <div class="logo-text">
+                        <h1>Rádio do Campo</h1>
+                        <p>Sua voz da terra</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="radio-player">
+                <div class="radio-info">
+                    <h2>Agora Tocando</h2>
+                    <p class="song-title">Carregando...</p>
+                </div>
+                
+                <div class="visualizer">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                
+                <div class="controls">
+                    <button id="playBtn" class="control-btn play">
+                        <svg class="icon" viewBox="0 0 24 24" width="24" height="24">
+                            <path fill="currentColor" d="M8 5v14l11-7z"/>
+                        </svg>
+                    </button>
+                    <button id="stopBtn" class="control-btn stop">
+                        <svg class="icon" viewBox="0 0 24 24" width="24" height="24">
+                            <path fill="currentColor" d="M6 6h12v12H6z"/>
+                        </svg>
+                    </button>
+                    <div class="volume-control">
+                        <svg class="volume-icon" viewBox="0 0 24 24" width="20" height="20">
+                            <path fill="currentColor" d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                        </svg>
+                        <input type="range" id="volumeSlider" min="0" max="100" value="50">
+                    </div>
+                </div>
+                
+                <audio id="radioStream" preload="metadata">
+                    <!-- Substitua a URL abaixo pelo seu arquivo MP3 -->
+                    <source src="audios/audio1.mp3" type="audio/mpeg">
+                    Seu navegador não suporta o elemento de áudio.
+                </audio>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Rádio do Campo. Todos os direitos reservados.</p>
+            <p>Levando a voz do campo para você</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
